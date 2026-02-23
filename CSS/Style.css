@@ -1,0 +1,275 @@
+/* Tema:
+ * CSS para portafolio
+ * Institución: TEC
+ * Carrera: Desarrollo de aplicaciones
+ * Curso: PROGRAMACION WEB I GR 1 T I 2026
+ * Profesor: Jose Pablo Garbanzo
+ * Autor: Edgardo Mora M.
+ * Fecha: 25-02-2026
+ */
+
+/* ********************************************************************************************************************/
+/* 1. HTML GENERAL
+/* ********************************************************************************************************************/
+
+/* SELECTORES BASICOS */ 
+
+/* Selector universal */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;  /*Recomendación en material */
+    
+}
+
+/* BLOQUES 
+
+/* <Div> bloques de ordenamiento de página (1. presentación, 2. sobre mi y habilidades, 3. proyectos) */
+.bloque_1, 
+.bloque_2, 
+.bloque_3{
+    margin:10px;
+}
+
+/* TITULOS */
+
+/* <H1> Nombre persona de portafolio */
+.titulo_principal
+{
+    font-family: "Bebas Neue", sans-serif;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    font-size: 3rem;  
+}
+
+/* <H2> Titulos de secciones */
+.titulo_seccion {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    font-family: "Orbitron", sans-serif;
+    font-size: 2rem;
+}
+
+/* <H3> Titulos de secciones */
+.titulos_menores{
+    font-family: "Orbitron", sans-serif;
+    font-size: 1rem;
+    padding: 2px;
+    margin-left: 20px;
+    background-color: black;
+    color: white;
+    border-radius: 25px;
+    display:inline-flex;
+}
+
+ /* *******************************************************************************************************************/
+/* 2. BARRA DE MENU/NAVEGACIÓN
+/* ********************************************************************************************************************/
+
+/* <Nav> Barra de menú principal */
+.menu_principal
+{
+    height: 80px;
+    background-color: black; 
+    display: flex;
+    align-items: center;  
+}
+
+/* <Div> contenedor para items/opciones de menú */
+.contenedor_elementos_menu
+{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+/* <ul> lista elementos del menú */
+.elementos_menu 
+{
+    display: flex;
+    color: white;
+    background-color: black;
+    list-style: none; /* Sin viñeta */
+    gap: 20px; /* separación entre elementos */
+    font-family: "Orbitron", sans-serif;
+    font-size:medium;
+    font-weight: bold;
+}
+
+/* <Img> Logo personal portafolio */
+.logo {
+    display: flex;  
+    justify-content: flex-end;
+    width: 54px;
+    height: auto;
+    margin-right: 80px;
+}
+
+/* <a> elemento Link  */
+a { 
+    color:white;
+    text-decoration:none; /* quita subrayado */
+}
+
+/* ********************************************************************************************************************/
+/* 3. FORMATO VISUAL GENERAL DE SECCIONES */
+/* ********************************************************************************************************************/
+
+/* <Section> presentación visual */
+section{
+    border: 2.5px solid gray;
+    border-radius: 8px;
+}
+
+/* <p> Párrafos */
+p, blockquote{
+    margin:20px;
+    color:darkslategrey;
+}
+
+/* ********************************************************************************************************************/
+/* BLOQUE: 1 - SECCIÓN: PRESENTACIÓN 
+/* ********************************************************************************************************************/
+
+/* CONTENIDO TEXTO: LADO IZQUIERDO */
+
+/* <div> contenedor general para información de presentación/hero */
+.contenedor_presentacion{
+    margin-top: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+}
+
+/* <div> subcontenedor izquierdo para manejo de texto */
+.subcont_presentacion_texto{
+    display: block;
+    flex: 0 0 50%;
+}
+
+/* <div> subcontenedor derecho para manejo de imagen */
+.subcont_presentacion_texto{
+    display: block;
+    flex: 0 0 50%;
+}
+
+/* <Img> Imagen de perfil de portafolio */
+.imagen_perfil{
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.presentacion_imagen{
+    display: flex;
+    flex: 0 0 50%;
+    margin-right: 20px;
+    margin-bottom:20px;
+    justify-content: flex-end;  
+    min-width: 100px;
+    height: auto;
+    max-width: 600px;
+}
+
+.presentacion_imagen img{
+    display:block;
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    border-radius: 22px;
+    background: linear-gradient(45deg, #ffffff 0%, #000000 100%);
+}
+
+/* ********************************************************************************************************************/
+/* BLOQUE: 2 (DOBLE) - SECCIONES: SOBRE MI (IZQUIERDA) + HABILIDADES (DERECHA)
+/* ********************************************************************************************************************/
+
+/* <Div> Contenedor padre para el bloque 2 */
+.bloque_2 {
+    display: flex;
+    align-items: stretch;
+    gap: 10px;
+}
+
+ /* <Section> sección sobre mi */
+.seccion_sobre_mi{
+    flex: 0 0 calc(70% - 5px);
+}
+
+ /* <Section> sección habilidades */
+.seccion_habilidades{
+    flex: 0 0 calc(30% - 5px);
+}
+
+/* <Div> contenido de info: sobre mi */
+.contenedor_sobre_mi{
+    display: block;
+}
+
+/* <Div> contenido de info: habilidades */
+.contenedor_habilidades{
+    display: flex;
+    align-items: stretch;       
+    gap: 40px;  
+}
+
+/* <ul> habilitades */
+.lista_habilitades 
+{
+    margin-left: 20px;
+    padding: 20px;
+    color: red;
+    list-style:circle;
+    font-family: "Orbitron", sans-serif;
+    font-size:medium;
+    font-weight: bold;
+}
+
+/* ********************************************************************************************************************/
+/* BLOQUE: 3 - SECCIÓN: PROYECTOS
+/* ********************************************************************************************************************/
+
+
+
+
+
+/* ********************************************************************************************************************/
+/* BLOQUE: 4 (FOOTER) - SECCIÓN: CONTACTOS
+/* ********************************************************************************************************************/
+
+.footer_layout{
+    background-color: black;
+    height: 200px;
+}
+
+.contenedor_redes
+{
+    display: block;
+}
+
+.lista_redes{
+  display: flex;
+  list-style: none;
+  gap: 16px;
+  padding: 0;
+  margin: 0;
+  align-items: center;
+}
+
+.seccion_redes{
+  width: 50%;
+}
+
+.lista_redes img{
+  width: 48px;
+  height: 48px;
+  display: block;
+}
+
+
+
+

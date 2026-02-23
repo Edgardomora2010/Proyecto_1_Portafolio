@@ -1,45 +1,367 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es" dir="ltr">
     <head>
-        <!-- Codificación de caracteres  -->
-        <meta charset="UTF-8" />
         
-        <!-- Responsive design -->
+        <!-- CODIFICACION CARACTERES  -->
+        <meta charset="UTF-8"/>
+        
+        <!-- RESPONSIVE DESIGN -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
-        <!-- Información -->
-        <meta name="description" content="Página de diseño y muestra de portafolio personal profesional">
+        <!-- SEO -->
+        <meta name="description" content="Página de diseño de portafolio personal profesional">
         <meta name="keywords" content="html, portafolio, diseño">
-        <meta name="author" content="Edgardo Mora">
+        <meta name="author" content="Edgardo Mora M">
 
-        <!-- Título -->
+        <!-- TÍTULO DE PAGINA -->
         <title>Mi portafolio personal</title>
         
-        <!-- Accesibilidad: CSS (Externo) -->
-        <link rel="stylesheet" href="CSS/style.css">
+        <!-- ACCESIBILIDAD: IMPLEMENTACIÓN CSS (EXTERNA) -->
+        <link rel="stylesheet" href="../CSS/Style.css">
+           
+        <!-- ACCESIBILIDAD: OTROS RECURSOS -->
         
-         <!-- Accesibilidad: Script JS -->
-        <link rel="stylesheet" href="JS/App.js">
+        <!-- IMPLEMENTACIÓN DE FONTS (GOOGLE) -->
+        <!-- ORBITRON (PARA TITULOS H1, H2) -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Ruda:wght@400..900&display=swap" 
+              rel="stylesheet">
         
-        <!-- Accesibilidad: Otros recursos -->
-        
+        <!--  BEBAS NEUE (TITULO PRINCIPAL) -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Orbitron:wght@400..900&family=Ruda:wght@400..900&display=swap" 
+              rel="stylesheet">
+           
+        <!-- FAVICON -->
+        <link rel="icon" type="image/png" href="../imagenes/Favicon.png">
         
     </head>
+    
     <body>
         
-         <header>
-            <h1>Mi Sitio Web</h1>
-            <nav>...</nav>
+        <header>
+        
+            <!-- MENU/NAV PRINCIPAL -->
+            <nav class="menu_principal">
+               
+                <!-- Contenedor de menú -->
+                <div class="contenedor_elementos_menu">
+                
+                    <!-- Lista de elementos del menú -->
+                    <ul class="elementos_menu">
+                        <li><a href="#presentacion">Presentación</a></li>
+                        <li><a href="#sobre_mi">Sobre mí</a></li>
+                        <li><a href="#habilidades">Habilidades</a></li>
+                        <li><a href="#proyectos">Proyectos</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Logo portafolio en menú navegación -->
+                <figure>
+                    <img class="logo" src="../imagenes/Logotipo_256x256.png" alt="Logotipo de eSolutions">
+                </figure> 
+               
+            </nav>
+            
         </header>
 
         <main>
-            <article>...</article>
+            
+            <!-- BLOQUE 1 - SECCION: PRESENTACION/HERO (IZQUIERDA) | IMAGEN PERFIL (DERECHA) -->
+            <div class="bloque_1">
+                
+                <!-- Sección: Presentación (Hero) -->
+                <section id="presentacion" class="section_presentacion">
+                    
+                    <!-- Título principal -->
+                    <h1 class="titulo_principal">Edgardo Mora M.</h1>
+                    
+                    <!-- contenedor presentación -->
+                    <div class="contenedor_presentacion">
+                        
+                        <!--Subcontenedor para texto, info: profesión, botón, etc -->
+                        <div class="subcont_presentacion_texto">
+                            
+                            <!-- Título sección -->
+                            <h2 class="titulo_seccion"><b>Desarrollador de aplicaciones</b></h2>
+                            <!-- Información sección -->
+                            <p>Desarrollo soluciones modernas enfocadas en eficiencia, diseño 
+                                limpio y arquitectura sólida.
+                            </p>
+                            <blockquote>
+                                <em>                                  
+                                    "Programs are meant to be read by humans and only incidentally for 
+                                     computers to execute."
+                                     - Donald Knuth
+                                </em>
+                            </blockquote>
+                            
+                            <!-- Link a contacto -->
+                            <a href="#contacto" class="btn_contacto">Ir a contacto</a>
+                            
+                        </div>
+                        
+                        <!-- Imagen personal de perfil de portafolio -->
+                        <div class="subcont_presentacion_imagen">
+                            <figure class="presentacion_imagen">
+                                <img src="../imagenes/Foto.png" alt="Foto de Edgardo Mora">
+                            </figure>
+                        </div>
+                          
+                    </div>
+                    
+                </section>
+            </div>
+            
+            <!-- BLOQUE 2 - SECCIÓN DOBLE: SECCION: SOBRE MI (IZQUIERDA) & HABILIDADES   (DERECHA) -->
+            <div class="bloque_2">
+                
+                <!-- SECCIÓN: SOBRE MI -->
+                <section id="sobre_mi" class="seccion_sobre_mi">
+                    
+                    <!-- contenedor de info de sección -->
+                    <div class="contenedor_sobre_mi">
+                        <!-- Título de sección -->
+                        <h2 class="titulo_seccion">Sobre mí</h2>
+                        <!-- párrafos de sección -->
+                        <p>Soy desarrollador en formación con enfoque en aplicaciones web modernas. 
+                           Me apasiona comprender la lógica detrás de cada sistema y construir soluciones 
+                           estructuradas, claras y funcionales.
+                        </p>
+                        <p>Tengo experiencia previa en programación orientada a escritorio y bases de datos, 
+                           que me ha permitido desarrollar una mentalidad analítica sólida. Actualmente 
+                           me enfoco en tecnologías web, fortaleciendo mis conocimientos en HTML, CSS 
+                           y diseño responsivo.
+                        </p>
+                        <p>Además de la tecnología, me interesa el arte y la composición musical, disciplinas 
+                           que influyen en mi forma de diseñar, proporcionando: equilibrio, estructura y 
+                           atención al detalle.
+                        </p>     
+                        
+                    </div>
+                    
+                </section>
+
+                <!-- SECCIÓN: HABILIDADES -->
+                <section id="habilidades" class="seccion_habilidades">
+                    
+                        <!-- Titulo de seccion -->
+                        <h2 class="titulo_seccion">Habilidades</h2>
+
+                        <!-- Conteneder para habilidades -->
+                        <div class="contenedor_habilidades">
+                            
+                            <!-- sub contenedor de Habilidades: tecnologías -->
+                            <div class="subcontenedor_habilitades">
+                                <h3 class="titulos_menores">Tecnologías</h3>
+                                <ul class="lista_habilitades">
+                                    <li>HTML5 Semántico</li>
+                                    <li>CSS3</li>
+                                    <li>Flexbox</li>
+                                    <li>Diseño Responsivo</li>
+                                    <li>Git</li>
+                                    <li>Modelado Relacional</li>
+                                </ul>
+                            </div>
+                            
+                            <!-- sub contenedor de Habilidades: lenguaje -->
+                            <div class="subcontenedor_habilidades">
+                                <h3 class="titulos_menores">Lenguajes</h3>
+                                <ul class="lista_habilitades">
+                                    <li>C#</li>
+                                    <li>Java</li>
+                                    <li>Python</li>
+                                    <li>SQL</li>
+                                </ul>
+                            </div>
+                
+                        </div>
+                    
+                </section>
+                
+            </div>
+            
+             <!-- BLOQUE 3 - SECCIÓN: PROYECTOS -->
+            <div class="bloque_3">
+            
+            <!-- SECCIÓN: PROYECTOS -->
+            <section id="proyectos" class="seccion_proyectos">
+                
+                <!-- Titulo de sección -->
+                <h2 class="titulo_seccion">Proyectos</h2>
+
+                <!-- Contenedor de proyectos -->
+                <div class="contenedor_proyectos">
+                    
+                    <!-- PROYECTO: 1 -->
+                    
+                    <!-- articulo proyecto -->
+                    <article class="elemento_proyecto">
+                    
+                        <!-- Info proyecto -->
+                        <div class="proyecto_info">
+                            
+                            <!-- Titulo de proyecto -->
+                            <h3 class="titulos_menores">Sistema de Gestión Hotelera</h3>
+                            
+                            <!-- Párrafos info -->
+                            <p>Aplicación orientada a la administración de reservas,
+                               clientes y facturación electrónica.
+                            </p>
+                            
+                            <p>
+                            <strong>Tecnologías:</strong> android, SQL Server
+                            </p>
+                            
+                            <!-- Link proyecto -->
+                            <div class="link_proyecto">
+                                <a href="#">GitHub</a>
+                                <a href="#">Demo</a>
+                            </div>
+                            
+                        </div>
+                        
+                        <!-- Imagen proyecto -->
+                        <figure>
+                            <img id="img_proyecto1" class="imagen_proyecto" src="../imagenes/Hotel_app.png" 
+                                 alt="Imagen sistema de gestión hotelera">
+                        </figure>
+                        
+                    </article>
+        
+                    <!-- PROYECTO: 2 -->
+                    
+                    <!-- articulo proyecto -->
+                    <article class="elemento_proyecto">
+                        
+                        <!-- Info proyecto -->
+                        <div class="proyecto_info">
+                            
+                            <!-- Titulo de proyecto -->
+                            <h3 class="titulos_menores">Portafolio Web Responsivo</h3>
+                            
+                            <!-- Párrafos info -->
+                            <p>
+                                Sitio single-page construido con HTML semántico y
+                                diseño adaptable mediante Flexbox.
+                            </p>
+                            
+                            <p>
+                                <strong>Tecnologías:</strong> HTML5, CSS3, Flexbox
+                            </p>
+                             
+                            <!-- Link proyecto -->
+                            <div class="link_proyecto">
+                                <a href="#">Git</a>
+                                <a href="#">Demo</a>
+                            </div>
+                            
+                        </div>
+                        
+                        <!-- Imagen de proyecto -->
+                        <figure>
+                            <img id="img_proyecto2" class="imagen_proyecto" src="../imagenes/responsive_web.png" 
+                                 alt="Interfaz de portafolio web responsivo">
+                        </figure>
+                        
+                    </article>
+                    
+                    <!-- PROYECTO: 3 -->
+                    <article class="elemento_proyecto">
+                        
+                        <!-- Info proyecto -->
+                        <div class="proyecto_info">
+                            
+                            <!-- Título proyecto -->
+                            <h3 class="titulos_menores">Herramienta de Análisis Musical</h3>
+                            
+                            <!-- Párrafos info -->
+                            <p>
+                                Aplicación conceptual orientada al análisis, aprendizaje y composición musical. 
+                                Permite identificar escalas, acordes, intervalos y aplicar variaciones 
+                                estructurales como inversión o transposición.
+                            </p>
+                            
+                            <p>
+                                <strong>Tecnologías:</strong> Framework:Java, Maven, JavaFX
+                            </p>      
+                        
+                            <!-- Link proyecto -->
+                            <div class="link_proyecto">
+                                <a href="#">GitHub</a>
+                                <a href="#">Documentación</a>
+                            </div>
+                        
+                        </div>
+                        
+                        <!-- Imagen de proyecto -->
+                        <figure>
+                            <img id="img_proyecto3" class="imagen_proyecto" src="../imagenes/Music_app.png"
+                                 alt="Interfaz de herramienta para análisis y transformación de motivos musicales">
+                        </figure>
+                        
+                    </article>
+
+                </div> 
+                
+            </section>
+                
+            </div>
+      
         </main>
 
-        <footer>...</footer>
+        <footer id="contacto">
+            <!-- BLOQUE 4 - SECCIÓN: CONTACTO -->
+            <div class="footer_layout">
+                <section class="seccion_redes">
+                    <div class="contenedor_redes">
+                        <ul class="lista_redes">
+                            <li>
+                                <a href="https:www.linked.com" target="_blank" rel="noopener">
+                                    <img src="../imagenes/Linked.png" alt="Linked">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.facebook.com" target="_blank" rel="noopener">
+                                    <img src="../imagenes/Facebook.png" alt="Facebook">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.instagram.com" target="_blank" rel="noopener">
+                                    <img src="../imagenes/Instagram.png" alt="Instagram">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.whatsapp.com" target="_blank" rel="noopener">
+                                    <img src="../imagenes/Whatsapp.png" alt="Whatsapp">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+                
+                <section class="seccion_contacto">
+                    <form>
+                        <fieldset>
+                            <legend>Información personal</legend>
+                            <label for="nombre">Nombre:</label>
+                            <input type="text" id="nombre">
+                            <label for="email">Email:</label>
+                            <input type="text" id="email">
+                            <label for="mensaje">Mensaje:</label>
+                            <input type="text" id="mensaje">
+                            <button type="submit">Enviar</button>
+                        </fieldset>
+                    </form>
+                </section>
+            </div>
+        </footer>
 
         <!-- Scripts JS -->
-        <script src="App.js"></script>
+        <script src="../JS/App.js"></script>
     
     </body>
 </html>
