@@ -9,7 +9,7 @@
  */
 
 /* ********************************************************************************************************************/
-/* 1. HTML GENERAL
+/* 1. HTML GENERAL DE PÁGINA
 /* ********************************************************************************************************************/
 
 /* SELECTORES BASICOS */ 
@@ -24,16 +24,18 @@
 
 /* BLOQUES 
 
-/* <Div> bloques de ordenamiento de página (1. presentación, 2. sobre mi y habilidades, 3. proyectos) */
+/* <Div> bloques de ordenamiento de página 
+ * (1. presentación, 2. sobre mi y habilidades, 3. proyectos, 4. contacto) */
 .bloque_1, 
 .bloque_2, 
-.bloque_3{
+.bloque_3,
+.bloque_4{
     margin:10px;
 }
 
 /* TITULOS */
 
-/* <H1> Nombre persona de portafolio */
+/* <h1> formato para nombre persona de portafolio */
 .titulo_principal
 {
     font-family: "Bebas Neue", sans-serif;
@@ -43,8 +45,10 @@
     font-size: 3rem;  
 }
 
-/* <H2> Titulos de secciones */
+/* <h2> formato para títulos de secciones */
 .titulo_seccion {
+    
+    display: inline-block;
     margin-top: 20px;
     margin-bottom: 20px;
     margin-left: 20px;
@@ -52,29 +56,47 @@
     font-size: 2rem;
 }
 
-/* <H3> Titulos de secciones */
+/* <h3> formato para títulos menores o terciarios */
 .titulos_menores{
     font-family: "Orbitron", sans-serif;
     font-size: 1rem;
     padding: 2px;
     margin-left: 20px;
-    background-color: black;
     color: white;
+    background-color: black;
     border-radius: 25px;
     display:inline-flex;
+}
+
+/* Descoración titulo */
+.titulo_seccion::after {
+    content: "";
+    display: block;
+    width: 85%;
+    height: 3px;
+    margin-left: 0;
+    background: black;
+    opacity: 0.25;
 }
 
  /* *******************************************************************************************************************/
 /* 2. BARRA DE MENU/NAVEGACIÓN
 /* ********************************************************************************************************************/
 
-/* <Nav> Barra de menú principal */
+/* <header> de menú */
+header{
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+/* <Nav> Barra de menú principal de opciones (presentación, sobre mi, etc) */
 .menu_principal
 {
     height: 80px;
     background-color: black; 
     display: flex;
-    align-items: center;  
+    align-items: center; 
 }
 
 /* <Div> contenedor para items/opciones de menú */
@@ -91,14 +113,26 @@
     display: flex;
     color: white;
     background-color: black;
-    list-style: none; /* Sin viñeta */
-    gap: 20px; /* separación entre elementos */
+    list-style: none;
+    gap: 20px; 
     font-family: "Orbitron", sans-serif;
     font-size:medium;
     font-weight: bold;
 }
 
-/* <Img> Logo personal portafolio */
+/* Borde decorado, aplica a primer elemento de lista de menú de opciones */
+.elementos_menu li:first-child a {
+  border-left: 2px solid red;
+  padding-left: 6px;
+}
+
+/* Borde decorado, aplica al último elemento de lista de menú de opciones */
+.elementos_menu li:last-child a {
+  border-right: 2px solid red;
+  padding-right: 6px;
+}
+
+/* <Img> Logo personal para portafolio */
 .logo {
     display: flex;  
     justify-content: flex-end;
@@ -107,7 +141,7 @@
     margin-right: 80px;
 }
 
-/* <a> elemento Link  */
+/* <a> formato elemento Link  */
 a { 
     color:white;
     text-decoration:none; /* quita subrayado */
@@ -117,7 +151,7 @@ a {
 /* 3. FORMATO VISUAL GENERAL DE SECCIONES */
 /* ********************************************************************************************************************/
 
-/* <Section> presentación visual */
+/* <Section> presentación visual para secciones*/
 section{
     border: 2.5px solid gray;
     border-radius: 8px;
@@ -129,60 +163,85 @@ p, blockquote{
     color:darkslategrey;
 }
 
+/* <div> <a> selector compuesto */
+/* Botón con enlace */
+.link_proyecto a{
+    display: inline-block;
+    padding: 5px;
+    border-bottom: 2px dashed rgba(255,255,255,0.5);
+    border-radius: 4px;
+    margin-left: 20px;
+    transition: 0.2s ease;
+}
+
+/* Efecto hover  del botón-enlace */
+.link_proyecto a:hover{
+    background: red;
+    color: white;
+    border: 2.5px solid black;
+}
+
 /* ********************************************************************************************************************/
 /* BLOQUE: 1 - SECCIÓN: PRESENTACIÓN 
 /* ********************************************************************************************************************/
-
-/* CONTENIDO TEXTO: LADO IZQUIERDO */
 
 /* <div> contenedor general para información de presentación/hero */
 .contenedor_presentacion{
     margin-top: 0;
     display: flex;
     flex-direction: row;
-    justify-content: center;
     align-items: center;
     gap: 80px;
 }
 
+/* Aplicado a <p> y <blockquote> texto centrado */
+.parrafo_justificado{
+    text-align:justify;
+}
+
 /* <div> subcontenedor izquierdo para manejo de texto */
 .subcont_presentacion_texto{
-    display: block;
     flex: 0 0 50%;
 }
 
-/* <div> subcontenedor derecho para manejo de imagen */
-.subcont_presentacion_texto{
-    display: block;
-    flex: 0 0 50%;
-}
-
-/* <Img> Imagen de perfil de portafolio */
-.imagen_perfil{
-    display: block;
-    max-width: 100%;
-    height: auto;
-}
-
+/* <figure> para imagen de perfil */
 .presentacion_imagen{
-    display: flex;
+    position: relative;
     flex: 0 0 50%;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
     margin-right: 20px;
-    margin-bottom:20px;
-    justify-content: flex-end;  
-    min-width: 100px;
-    height: auto;
-    max-width: 600px;
+    z-index:1;
 }
 
+/* <div> , <img> selector compuesto para ajuste imagen */
 .presentacion_imagen img{
     display:block;
     width: 100%;
     height: auto;
     max-width: 100%;
+    min-width: 100px;
     border-radius: 22px;
+    border: 1px solid rgba(0,0,0,0.2);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.6);
     background: linear-gradient(45deg, #ffffff 0%, #000000 100%);
 }
+
+/* <div> decoración de código html sobre imagen de perfil */
+.codigo_html{
+    position: absolute;
+    top: 10%;
+    left:0%;
+    color:black;
+    opacity: 0.25;
+    transform: rotate(-3deg) scale(1.3);
+    pointer-events: none;
+    z-index: 2;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    text-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
 
 /* ********************************************************************************************************************/
 /* BLOQUE: 2 (DOBLE) - SECCIONES: SOBRE MI (IZQUIERDA) + HABILIDADES (DERECHA)
@@ -207,6 +266,9 @@ p, blockquote{
 
 /* <Div> contenido de info: sobre mi */
 .contenedor_sobre_mi{
+    /*display: flex;
+    flex-direction: column;      
+    gap: 40px; */ 
     display: block;
 }
 
@@ -233,42 +295,466 @@ p, blockquote{
 /* BLOQUE: 3 - SECCIÓN: PROYECTOS
 /* ********************************************************************************************************************/
 
+/* <article> contenedor general (prosa e imagen de proyecto) */
+.articulo_proyecto{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
 
+/* Constraste visual con degradado, aplica a todos los proyectos impares */
+.articulo_proyecto:nth-child(odd) {
+    
+   background: linear-gradient(90deg,rgba(0,0,0,0.20),rgba(0,0,0,0.0));
+}
 
+/* <article> contenedor (prosa e imagen) proyectos (1 y 3) */
+#proyecto_1,
+#proyecto_3{
+    /*flex-direction: column-reverse; (alternativo de acomodo) */ 
+    flex-direction: row;
+}
 
+/* <article> contenedor (prosa e imagen) proyecto 2 */
+#proyecto_2{
+    flex-direction: row-reverse;
+}
+
+/* <div> contenedor para texto */
+.proyecto_info{
+    flex: 0 0 calc(50% - 10px);
+    /*padding: 20px;*/
+}
+
+/* <div> contenedor para imagen */
+.cont_proyecto_imagen{
+    flex: 0 0 calc(50% - 10px);
+    /*padding: 20px;*/
+}
+
+/* <figure> contenedor de imagen proyecto (1 y 3) */
+#fig_1, 
+#fig_3{
+    display: flex;
+    /*justify-content: center;*/
+    justify-content: flex-end;
+    margin-right: 20px;
+}
+
+/* <figure> contenedor de imagen proyecto (2)  */
+#fig_2{
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 20px;
+}
+
+/* <img> formato para imagen de proyecto */
+.imagen_proyecto{
+    display: block;
+    width: 60%;
+    max-width: 100%;
+    height: auto;
+}
+
+figure{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.figcaption{
+    color:salmon;
+    width: 100%;
+    text-align: center;
+    margin-top: 6px;
+}
+
+/* <div> enlace a proyecto */
+.link_proyecto{
+    margin-top: 15px;
+}
+
+/* Selector compuesto <div>, <a> para enlace proyecto */
+.link_proyecto a{
+    display: inline-block;
+    padding: 6px 6px;
+    /*margin-right: 10px;*/
+    text-decoration:overline;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 500;
+    color: black;
+    border: 4px solid rgba(0,0,0,0.2);
+    border-radius: 6px;
+    transition: all 0.2s ease;
+}
+
+/* Hover */
+.link_proyecto a:hover{
+    background: red;
+    color: white;
+    border: 4px solid black;
+}
 
 /* ********************************************************************************************************************/
 /* BLOQUE: 4 (FOOTER) - SECCIÓN: CONTACTOS
 /* ********************************************************************************************************************/
 
-.footer_layout{
-    background-color: black;
-    height: 200px;
-}
-
-.contenedor_redes
-{
+/* <div> contenedor o bloque 4 para sección de contactos y formulario */
+.bloque_4{
     display: block;
 }
 
+/* <div> Contenedor para contacto y formularios */
+.contenedor_contacto{
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+/* <div> subcontenedor para formulario */
+.subcontenedor_formulario{
+    border: 2.5px solid black;
+    background-color: black;
+    border-radius: 5px;
+    color: white;
+    margin:5px;
+}
+
+/* <div> subcontenedor para redes */
+.subcontenedor_redes{
+    margin:5px;
+    border: 2.5px solid black;
+    border-radius: 8px;
+    background-color: black;
+    color: white;
+}
+
+/* <ul> lista de redes sociales */
 .lista_redes{
   display: flex;
   list-style: none;
-  gap: 16px;
-  padding: 0;
+  justify-content: center;
+  align-items:center;
+  gap: 5px;
   margin: 0;
-  align-items: center;
+  padding: 5px;
 }
 
-.seccion_redes{
-  width: 50%;
+/* <img> imagen para iconos de redes sociales */
+.ima_red{
+    width: 48px;
+    height: auto;
 }
 
-.lista_redes img{
-  width: 48px;
-  height: 48px;
-  display: block;
+/* <fieldset> formato de botón de formulario */
+.subcontenedor_formulario fieldset{
+    font-weight: 600;
+    font-size: 1rem;
+    border: 2px solid rgba(255,255,255,0.3);
+    border-radius: 6px;
+    padding: 8px;
 }
+
+/* <legend> formato de botón de formulario */
+.subcontenedor_formulario legend{
+    font-family: "Orbitron", sans-serif;
+    font-size: 1.5rem;
+    padding: 8px;
+    color: rgba(255,255,255,0.9);
+}
+
+/* <label> formato de botón de formulario */
+.subcontenedor_formulario label{
+    display: block;
+    margin: 6px;
+    font-size: 1rem;
+    color: rgba(255,255,255,0.85);
+}
+
+/* <input> formato de botón de formulario */
+.subcontenedor_formulario input{
+    width: 50%;
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid rgba(255,255,255,0.25);
+    background: rgba(255,255,255,0.08);
+    color: white;
+    outline: none;
+}
+
+/* <div> contenedor botón de formulario */
+.div_boton{
+    display: flex;
+    justify-content: end;
+}
+
+/* <button> formato de botón de formulario */
+.subcontenedor_formulario button{
+    display: flex;
+    justify-content: center;   
+    align-items: center;       
+    font-weight: 600;
+    font-size: 1rem;
+    margin-top: 10px;
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid rgba(255,255,255,0.25);
+    background: white;
+    color: black;
+    cursor: pointer;
+    transition: 0.2s ease;
+    width: 150px;
+    height:50px;
+    text-align: center;
+}
+
+#copyright{
+    display: flex;
+    justify-content: center;
+}
+
+
+/**********************************************************************************************************************/
+/* DISEÑO RESPONSIVO: */
+/**********************************************************************************************************************/
+
+/* MOBILE FIRST (0px–767px) */
+/* DISEÑO PROBANDO CON SAMSUNG GALAXY S8 ULTRA (TAMAÑO 360px x 740px) */
+
+@media (max-width: 767px){
+    
+    /* TITULOS: Cambio de letra y tamaño */
+    .titulo_principal { 
+        font-size: 18px; 
+        font-weight: 600;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    .titulo_seccion {
+        font-size: 14px; 
+        font-weight: 600;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    .titulos_menores {
+        font-size: 12px; 
+        font-weight: 500;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    /* NAVEGACIÓN - MENU */
+    
+       /* <nav> Navegador */
+    .menu_principal{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    
+    /* <img> Logo */
+    .logo{
+        order: 1;
+        flex: 1 1 30%;
+        margin-right: 0;
+    }
+    
+    /* <div> contenedor elementos menú */
+    .contenedor_elementos_menu{
+        order: 2;
+        flex: 1 1 70%;
+        justify-content: center;
+    }
+    
+    /* <ul> elementos menú */
+    .elementos_menu{
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        font-size: 0.8rem;
+    }
+    
+    /* SECCION: HERO - PRESENTACION */
+    
+    /* <div> contenedor general presentación */
+    .contenedor_presentacion{
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    /* <div> contenedor para texto presentación */
+    .subcont_presentacion_texto{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    /* <figure> contenedor presentación para imagen */
+    .presentacion_imagen{
+        display: flex;
+        justify-content: flex-end;
+        flex: 1 1 100%;
+        margin-right: 0;
+    }
+    
+    .presentacion_imagen img{
+        display: flex;
+        flex: 1 1 50%;
+        justify-content: flex-end;
+        max-width: 150px;
+        width: 150px;
+        height: auto;
+        margin-left: 100px;
+    }
+    
+    .codigo_html{
+        position: absolute;
+        bottom: 100%;
+        left: 18%;
+        transform: rotate(0deg) scale(0.3);
+    }
+    
+    /* BLOQUE 2: SECCIONES: SOBRE MI + HABILIDADES */
+    .bloque_2{
+        flex-direction: column;
+    }
+    
+    /* Innecesarias ? */
+    /* <section> */ 
+    /*.seccion_sobre_mi{
+        display: block;
+    }*/
+    /*.seccion_habilidades{
+        display: block;
+    }*/
+    
+    /* <div> contenedor de habilidades */
+    .contenedor_habilidades{
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        gap: 5px;
+    }
+    
+    /* SECCION: PROYECTOS  */
+    
+    /*<articles> contenedor de proyectos */
+    
+    .articulo_proyecto{
+        display: flex;
+        flex: 1 1 calc(100% - 5px);
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom: 30px;
+    }
+    
+    /* <div> contenedor de imagen, prosa, y enlaces de proyectos */
+    #proyecto_2{
+        flex-direction: column; 
+    }
+    
+    /* <figure> contenedor de imagen de proyecto */
+    #fig_1, 
+    #fig_2, 
+    #fig_3{
+        justify-content: center;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    
+    /* <img> imagen de proyecto */
+    .imagen_proyecto{
+        width: 100%;
+    }
+    
+    /* SECCION: CONTACTO:  */
+    .contenedor_contacto{
+        display: flex;
+        flex: 1 1 100%;
+        flex-direction: column-reverse;
+    }
+    
+      
+}
+
+/* TABLETS (768px-1023px) */
+/* DISEÑO PROBANDO CON IPAD MINI (TAMAÑO: 768px x 1024px) */
+
+@media (min-width: 768px){
+    
+    /* BLOQUE 1
+    /* <div> contenedor general de datos de presentación */
+    .contenedor_presentacion{
+        gap: 20px;
+    }
+    
+    .codigo_html{
+        transform: rotate(-1deg) scale(0.8);     
+    }
+ 
+    /* <div> contenedor de secciones : sobre mi + habilidades */
+    .bloque_2{
+        flex-direction: row;
+    }
+    
+    /* <section> secciones de datos sobre mi y habilidades
+     * Se cambian proporciones de panel lateral izquierdo y derecho, originalmente en diseño para navegador desktop
+     * con 70 % y 30 respectivamente, por un proporción de 50% y 50% para cada panel, menos un margen de 5px, ya que
+     * bajo medidas originales, se estaba desajustando visualización para esta versión de tablet.
+     */
+    
+    /* <section> */
+    .seccion_sobre_mi{
+        flex: 0 0 calc(50% - 5px);
+    }
+    
+    /* <section> */
+    .seccion_habilidades{
+        flex: 0 0 calc(50% - 5px);
+    }
+      
+    /* Otros ajustes */
+    
+    /* <article> */
+    .articulo_proyecto{
+        gap: 20px;
+    } 
+    /* <img> */
+    .imagen_proyecto{
+        width: 95%;
+    }
+    
+}
+
+/* DESKTOP PEQUEÑO */
+@media (min-width: 1024px){
+    /* Visualización por defecto */
+}
+
+/* DESKTOP GRANDE 1440px x 2556px */ 
+@media (min-width: 1440px){
+    
+}
+
+
+    
+    
+
+    
+    
+
+  
+    
+
+
+
+
+
+
+
+
+
 
 
 

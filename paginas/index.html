@@ -87,11 +87,13 @@
                             
                             <!-- Título sección -->
                             <h2 class="titulo_seccion"><b>Desarrollador de aplicaciones</b></h2>
+                            
                             <!-- Información sección -->
-                            <p>Desarrollo soluciones modernas enfocadas en eficiencia, diseño 
+                            <p class="parrafo_centrado">Desarrollo soluciones modernas enfocadas en eficiencia, diseño 
                                 limpio y arquitectura sólida.
                             </p>
-                            <blockquote>
+                            
+                            <blockquote class="parrafo_centrado">
                                 <em>                                  
                                     "Programs are meant to be read by humans and only incidentally for 
                                      computers to execute."
@@ -100,15 +102,40 @@
                             </blockquote>
                             
                             <!-- Link a contacto -->
-                            <a href="#contacto" class="btn_contacto">Ir a contacto</a>
+                            <div class="link_proyecto">
+                                <a href="#contacto">Ir a contacto</a>
+                            </div>
                             
                         </div>
                         
-                        <!-- Imagen personal de perfil de portafolio -->
+                        <!-- IMAGEN DE PERFIL PORTAFOLIO -->
                         <div class="subcont_presentacion_imagen">
+                                     
+                            <!-- figure para situar imagen -->
                             <figure class="presentacion_imagen">
-                                <img src="../imagenes/Foto.png" alt="Foto de Edgardo Mora">
+                                
+                                <!-- Imagen de perfil de portafolio -->
+                                <img class="imagen_perfil" src="../imagenes/Foto.png" alt="Foto de Edgardo Mora">
+                                   
+                                <!-- simulacion codigo html para superponer en imagen + gradient -->
+                                <div class="codigo_html">
+                                    <h1>html</h1>
+                                    <p>height:650px;}</p>
+                                    <h1>CSS</h1>
+                                    <h1>HTML5</h1>
+                                    <p>Div id=container</p>
+                                    <p>class=name;</p>
+                                    <h2>color: #000;</h2>
+                                    <h3>transform:</h3>
+                                    <h5>rotate(45deg)</h5>
+                                    <p><b>parse: function(d, u)</b></p>
+                                    <h1>function !=</h1>
+                                    <h3>typeof u ||</h3>
+                                    <h2>(u = {callback:</h2>                                                    
+                                </div>
+                                
                             </figure>
+                                                                             
                         </div>
                           
                     </div>
@@ -124,19 +151,21 @@
                     
                     <!-- contenedor de info de sección -->
                     <div class="contenedor_sobre_mi">
+                        
                         <!-- Título de sección -->
                         <h2 class="titulo_seccion">Sobre mí</h2>
+                        
                         <!-- párrafos de sección -->
-                        <p>Soy desarrollador en formación con enfoque en aplicaciones web modernas. 
+                        <p class="parrafo_justificado">Soy desarrollador en formación con enfoque en aplicaciones web modernas. 
                            Me apasiona comprender la lógica detrás de cada sistema y construir soluciones 
                            estructuradas, claras y funcionales.
                         </p>
-                        <p>Tengo experiencia previa en programación orientada a escritorio y bases de datos, 
+                        <p class="parrafo_justificado">Tengo experiencia previa en programación orientada a escritorio y bases de datos, 
                            que me ha permitido desarrollar una mentalidad analítica sólida. Actualmente 
                            me enfoco en tecnologías web, fortaleciendo mis conocimientos en HTML, CSS 
                            y diseño responsivo.
                         </p>
-                        <p>Además de la tecnología, me interesa el arte y la composición musical, disciplinas 
+                        <p class="parrafo_justificado">Además de la tecnología, me interesa el arte y la composición musical, disciplinas 
                            que influyen en mi forma de diseñar, proporcionando: equilibrio, estructura y 
                            atención al detalle.
                         </p>     
@@ -156,7 +185,10 @@
                             
                             <!-- sub contenedor de Habilidades: tecnologías -->
                             <div class="subcontenedor_habilitades">
+                                
+                                <!-- Titulos menores -->
                                 <h3 class="titulos_menores">Tecnologías</h3>
+                                
                                 <ul class="lista_habilitades">
                                     <li>HTML5 Semántico</li>
                                     <li>CSS3</li>
@@ -169,7 +201,10 @@
                             
                             <!-- sub contenedor de Habilidades: lenguaje -->
                             <div class="subcontenedor_habilidades">
+                                
+                                <!-- Titulos menores -->
                                 <h3 class="titulos_menores">Lenguajes</h3>
+                                
                                 <ul class="lista_habilitades">
                                     <li>C#</li>
                                     <li>Java</li>
@@ -193,19 +228,19 @@
                 <!-- Titulo de sección -->
                 <h2 class="titulo_seccion">Proyectos</h2>
 
-                <!-- Contenedor de proyectos -->
+                <!-- Contenedor general para proyectos -->
                 <div class="contenedor_proyectos">
                     
                     <!-- PROYECTO: 1 -->
                     
                     <!-- articulo proyecto -->
-                    <article class="elemento_proyecto">
-                    
+                    <article id="proyecto_1" class="articulo_proyecto">
+                        
                         <!-- Info proyecto -->
-                        <div class="proyecto_info">
+                        <div id="proy_info_1" class="proyecto_info">
                             
                             <!-- Titulo de proyecto -->
-                            <h3 class="titulos_menores">Sistema de Gestión Hotelera</h3>
+                            <h3 id="titulo_proy_1" class="titulos_menores">Sistema de Gestión Hotelera</h3>
                             
                             <!-- Párrafos info -->
                             <p>Aplicación orientada a la administración de reservas,
@@ -216,32 +251,41 @@
                             <strong>Tecnologías:</strong> android, SQL Server
                             </p>
                             
-                            <!-- Link proyecto -->
+                            <!-- Link/boton proyecto -->
                             <div class="link_proyecto">
-                                <a href="#">GitHub</a>
-                                <a href="#">Demo</a>
+                                <a href="https://github.com" target="_blank" 
+                                   rel="noopener noreferrer">Git</a>
+                                
+                                <a href="https://github.com" target="_blank" 
+                                   rel="noopener noreferrer">Demo</a>
                             </div>
                             
                         </div>
                         
-                        <!-- Imagen proyecto -->
-                        <figure>
-                            <img id="img_proyecto1" class="imagen_proyecto" src="../imagenes/Hotel_app.png" 
-                                 alt="Imagen sistema de gestión hotelera">
-                        </figure>
+                        <!-- cotenedor lateral para imagen -->
+                        <div id="cont_imagen_1" class="cont_proyecto_imagen">
+                            
+                            <!-- Imagen proyecto -->
+                            <figure id="fig_1">
+                                <img id="img_proyecto_1" class="imagen_proyecto" src="../imagenes/Hotel_app.png" 
+                                     alt="Imagen sistema de gestión hotelera">
+                                <figcaption class="figcaption"><b>Fig 1. Sistema gestión hotelera</b></figcaption>
+                            </figure>
+                            
+                        </div>
                         
                     </article>
         
                     <!-- PROYECTO: 2 -->
                     
                     <!-- articulo proyecto -->
-                    <article class="elemento_proyecto">
+                    <article id="proyecto_2" class="articulo_proyecto">
                         
                         <!-- Info proyecto -->
-                        <div class="proyecto_info">
+                        <div id="proy_info_2" class="proyecto_info">
                             
                             <!-- Titulo de proyecto -->
-                            <h3 class="titulos_menores">Portafolio Web Responsivo</h3>
+                            <h3 id="titulo_proy_2" class="titulos_menores">Portafolio Web Responsivo</h3>
                             
                             <!-- Párrafos info -->
                             <p>
@@ -255,34 +299,46 @@
                              
                             <!-- Link proyecto -->
                             <div class="link_proyecto">
-                                <a href="#">Git</a>
-                                <a href="#">Demo</a>
+                                <a href="https://github.com" target="_blank" 
+                                   rel="noopener noreferrer">Git</a>
+                                
+                                <a href="https://github.com" target="_blank" 
+                                   rel="noopener noreferrer">Demo</a>
                             </div>
                             
                         </div>
                         
-                        <!-- Imagen de proyecto -->
-                        <figure>
-                            <img id="img_proyecto2" class="imagen_proyecto" src="../imagenes/responsive_web.png" 
-                                 alt="Interfaz de portafolio web responsivo">
-                        </figure>
+                        <!-- cotenedor lateral para imagen -->
+                        <div id="cont_imagen_2" class="cont_proyecto_imagen">
+                            
+                            <!-- Imagen de proyecto -->
+                            <figure id="fig_2">
+                                <img id="img_proyecto_2" class="imagen_proyecto" src="../imagenes/responsive_web.png" 
+                                     alt="Interfaz de portafolio web responsivo">
+                                <figcaption class="figcaption"><b>Fig 2. Portafolio responsivo</b></figcaption>
+                            </figure>
+                            
+                        </div>
                         
                     </article>
                     
                     <!-- PROYECTO: 3 -->
-                    <article class="elemento_proyecto">
-                        
+                    <article id="proyecto_3" class="articulo_proyecto">
+                                          
                         <!-- Info proyecto -->
-                        <div class="proyecto_info">
+                        <div id="proy_info_3" class="proyecto_info">
                             
                             <!-- Título proyecto -->
-                            <h3 class="titulos_menores">Herramienta de Análisis Musical</h3>
-                            
+                            <h3 id="titulo_proy_3" class="titulos_menores">Herramienta de Análisis Musical</h3>
+                                                   
                             <!-- Párrafos info -->
-                            <p>
+                            <p>  
                                 Aplicación conceptual orientada al análisis, aprendizaje y composición musical. 
-                                Permite identificar escalas, acordes, intervalos y aplicar variaciones 
-                                estructurales como inversión o transposición.
+                            </p>
+                            
+                            <p>
+                            Permite identificar escalas, acordes, intervalos y aplicar variaciones 
+                            estructurales como inversión o transposición.
                             </p>
                             
                             <p>
@@ -291,17 +347,26 @@
                         
                             <!-- Link proyecto -->
                             <div class="link_proyecto">
-                                <a href="#">GitHub</a>
-                                <a href="#">Documentación</a>
+                                <a href="https://github.com" target="_blank" 
+                                   rel="noopener noreferrer">Git</a>
+                                
+                                <a href="https://github.com" target="_blank" 
+                                   rel="noopener noreferrer">Demo</a>
                             </div>
                         
                         </div>
                         
-                        <!-- Imagen de proyecto -->
-                        <figure>
-                            <img id="img_proyecto3" class="imagen_proyecto" src="../imagenes/Music_app.png"
-                                 alt="Interfaz de herramienta para análisis y transformación de motivos musicales">
-                        </figure>
+                        <!-- cotenedor lateral para imagen -->
+                        <div id="cont_imagen_3" class="cont_proyecto_imagen">
+                            
+                            <!-- Imagen de proyecto -->
+                            <figure id="fig_3">
+                                <img id="img_proyecto_3" class="imagen_proyecto" src="../imagenes/Music_app.png"
+                                     alt="Interfaz de herramienta para análisis y transformación de motivos musicales">
+                                <figcaption class="figcaption"><b>Fig 3. Sistema de análisis musical</b></figcaption>
+                            </figure>
+                            
+                        </div>
                         
                     </article>
 
@@ -313,55 +378,87 @@
       
         </main>
 
-        <footer id="contacto">
-            <!-- BLOQUE 4 - SECCIÓN: CONTACTO -->
-            <div class="footer_layout">
-                <section class="seccion_redes">
-                    <div class="contenedor_redes">
+        <!-- SEGMENTO FOOTER DE PAGINA -->
+        <footer class="segmento_footer">
+            
+             <!-- BLOQUE 4 - SECCIÓN: CONTACTO -->
+            <div class="bloque_4">
+                
+                <section id="contacto" class="seccion_contacto">
+                    
+                    <!-- Titulo de sección -->
+                    <h2 class="titulo_seccion">Contacto:</h2>
+                    
+                    <div class="contenedor_contacto">
+                    
+                    <div class="subcontenedor_redes">
+                        
+                        <!-- Lista redes sociales -->
                         <ul class="lista_redes">
                             <li>
-                                <a href="https:www.linked.com" target="_blank" rel="noopener">
-                                    <img src="../imagenes/Linked.png" alt="Linked">
+                                <a href="https:www.linkedin.com" target="_blank" rel="noopener">
+                                    <img class="ima_red" src="../imagenes/Linked.png" alt="Linked">
                                 </a>
                             </li>
                             <li>
                                 <a href="https://www.facebook.com" target="_blank" rel="noopener">
-                                    <img src="../imagenes/Facebook.png" alt="Facebook">
+                                    <img class="ima_red" src="../imagenes/Facebook.png" alt="Facebook">
                                 </a>
                             </li>
                             <li>
                                 <a href="https://www.instagram.com" target="_blank" rel="noopener">
-                                    <img src="../imagenes/Instagram.png" alt="Instagram">
+                                    <img class="ima_red" src="../imagenes/Instagram.png" alt="Instagram">
                                 </a>
                             </li>
                             <li>
                                 <a href="https://www.whatsapp.com" target="_blank" rel="noopener">
-                                    <img src="../imagenes/Whatsapp.png" alt="Whatsapp">
+                                    <img class="ima_red" src="../imagenes/Whatsapp.png" alt="Whatsapp">
                                 </a>
                             </li>
                         </ul>
+                        
                     </div>
-                </section>
                 
-                <section class="seccion_contacto">
+                    <!-- Contenedor para formulario de contacto de página -->
+                    <div class="subcontenedor_formulario">
+                        
                     <form>
                         <fieldset>
-                            <legend>Información personal</legend>
+                            
+                            <!-- Campos de formulario de contacto -->
+                            <legend>Información personal:</legend>
                             <label for="nombre">Nombre:</label>
                             <input type="text" id="nombre">
                             <label for="email">Email:</label>
                             <input type="text" id="email">
                             <label for="mensaje">Mensaje:</label>
                             <input type="text" id="mensaje">
-                            <button type="submit">Enviar</button>
+                            <div class="div_boton">
+                                <button type="submit">Enviar</button>
+                            </div>
+                            
+                            
                         </fieldset>
+                        
                     </form>
+                        
+                    </div>
+                        
+                    </div>
+                    
+                    <p id="copyright">Copyright 2026 ©</p>
+                    
                 </section>
+                    
             </div>
+                               
         </footer>
-
+        
+        <!-- Recomendación de posicionamiento del Javascript de acuerdo con material -->
+        
         <!-- Scripts JS -->
         <script src="../JS/App.js"></script>
     
     </body>
+    
 </html>
